@@ -85,7 +85,7 @@ if st.button("Generate Money 💵"):
 # Fetch Side Hustle ideas from API
 def fetch_side_hustle():
     try:
-        response = requests.get("http://127.0.0.1:8000/side-hustles?api_key=1234567890")
+        response = requests.get("https://fastapi-api.vercel.app/side_hustles")
         if response.status_code == 200:
             hustles = response.json()
             return hustles["side_hustle"]
@@ -102,7 +102,7 @@ if st.button("Generate Hustle 💡"):
 # Fetch Money Motivation Quotes
 def fetch_money_quote():
     try:
-        response = requests.get("http://127.0.0.1:8000/money-quotes?api_key=1234567890")
+        response = requests.get("https://fastapi-api.vercel.app/money_quotes")
         if response.status_code == 200:
             quotes = response.json()
             return quotes["money_quote"]
